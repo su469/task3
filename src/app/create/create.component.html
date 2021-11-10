@@ -1,0 +1,30 @@
+<div class="container mt-3">
+    <div class="row ">
+        <div  *ngIf="errMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{errMsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+       
+        <form [formGroup]="userForm" >
+
+            <div class="col-lg-4 mt-2 ">
+                <input type="text" class="form-control" formControlName="first_name"
+                    style="border-color: darkcyan;width: 300px; " placeholder="Enter frist-name">
+            </div>
+            <div class="col-lg-4 mt-2">
+                <input type="text" class="form-control" formControlName="email"
+                    style="border-color: darkcyan;width: 300px; " placeholder="Enter email">
+            </div>
+            <div class="col-lg-4 mt-2">
+                <input type="text" style="border-color: darkcyan;width: 300px; " formControlName="phonenumber"
+                    class="form-control" placeholder="Enter phonenumber">
+            </div>
+            <div class="button"  *ngIf ="!getparamid" >
+                <button type="submit" class="btn btn-primary" (click) = "userSubmit()">Add Data</button>
+            </div>
+            <div class="button"  *ngIf ="getparamid" (click) = "updateUser()" >
+                <button type="submit" class="btn btn-success" > update</button>
+            </div>
+        </form>
+    </div>
+</div>

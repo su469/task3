@@ -1,0 +1,28 @@
+.container{
+    background-color:white;
+    border-radius: 3px 5px 3px 5px solid black;
+    box-shadow: 5px 10px 10px 5px gainsboro;
+    margin-top: 20px;
+   
+}
+.row{
+    position: relative;
+    
+}
+
+.form-control{
+    color:black;
+    margin-top: 30px;
+    
+}
+.button{
+    margin-top: 30px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    
+}
+.btn{
+    padding: 5px 10px 5px 10px;
+    
+
+}
